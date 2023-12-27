@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LAMPIRAN PROPOSAL DAN CV OWEN</title>
+    <title>LAMPIRAN PROPOSAL DAN CV OWENr</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -81,20 +81,20 @@
         </header>
 
         <div class="pdf-options">
-            <button class="pdf-option" onclick="loadPDF('https://drive.google.com/file/d/1sYHq3OA_oyUMK85RJOy40BihNkM0E6E5/preview')">Proposal</button>
-            <button class="pdf-option" onclick="loadPDF('https://drive.google.com/file/d/1g2I0jH-wyZCs_3kRgRK03L_d5HIixLuS/preview')">CV</button>
+            <button class="pdf-option" onclick="loadPDF('CV Owen Cristino Laysky.pdf')">CV</button>
+            <button class="pdf-option" onclick="loadPDF('PROPOSAL PROCOD_3.pdf')">Proposal</button>
         </div>
 
         <div class="pdf-viewer">
-            <!-- Ganti 'your-proposal-file-id' dengan ID proposal Google Drive Anda -->
-            <iframe src="https://drive.google.com/file/d/1sYHq3OA_oyUMK85RJOy40BihNkM0E6E5/preview" width="640" height="480"></iframe>
+            <embed id="pdfViewer" type="application/pdf" />
         </div>
     </div>
 
     <script>
-        function loadPDF(pdfURL) {
-            var pdfViewer = document.querySelector('.pdf-viewer iframe');
-            pdfViewer.src = pdfURL;
+        function loadPDF(pdfFileName) {
+            var pdfViewer = document.getElementById('pdfViewer');
+            var fileURL = pdfFileName.replace(/\s/g, '%20');
+            pdfViewer.src = fileURL;
         }
     </script>
 
