@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAMPIRAN PROPOSAL DAN CV OWENr</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        header {
+            background-color: #000000;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            border-bottom: 2px solid #000000;
+        }
+
+        h2 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        .pdf-options {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        .pdf-option {
+            margin: 0 10px;
+            padding: 10px 20px;
+            background-color: #000000;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .pdf-option:hover {
+            background-color: #2980b9;
+        }
+
+        .pdf-viewer {
+            display: grid;
+            place-items: center;
+            height: 500px;
+            overflow: hidden;
+        }
+
+        embed, iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h2>LAMPIRAN PROPOSAL DAN CV OWEN</h2>
+        </header>
+
+        <div class="pdf-options">
+            <button class="pdf-option" onclick="loadPDF('CV Owen Cristino Laysky.pdf')">CV</button>
+            <button class="pdf-option" onclick="loadPDF('PROPOSAL PROCOD_3.pdf')">Proposal</button>
+        </div>
+
+        <div class="pdf-viewer">
+            <embed id="pdfViewer" type="application/pdf" />
+        </div>
+    </div>
+
+    <script>
+        function loadPDF(pdfFileName) {
+            var pdfViewer = document.getElementById('pdfViewer');
+            var fileURL = pdfFileName.replace();
+            pdfViewer.src = fileURL;
+        }
+    </script>
+
+</body>
+</html>
