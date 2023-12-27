@@ -93,7 +93,7 @@
     <script>
         function loadPDF(pdfFileName) {
             var pdfViewer = document.getElementById('pdfViewer');
-            var fileURL = pdfFileName.replace();
+            var fileURL = pdfFileName.replace(/\s/g, '%20');
             pdfViewer.src = fileURL;
         }
     </script>
